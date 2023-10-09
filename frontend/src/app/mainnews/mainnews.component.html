@@ -1,0 +1,152 @@
+<div class="flex flex-col space-y-20">
+
+    <nav id="navbar" class="flex py-3 pl-2 justify-between bg-purple-600 text-white fixed w-[100%]">
+
+        <div id="settingButton" class="w-[20%]">
+
+            <div class="flex items-center space-x-3 w-[100%] p-1">
+                <div class="bg-white rounded-lg mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="32">
+                        <g fill="#828282">
+                            <path
+                                d="M37 29c1.196 0 2-.804 2-2V.5a.5.5 0 0 0-1 0V27c0 .87-.627 1-1 1-.103 0-1-.028-1-1V.5a.5.5 0 0 0-1 0V27c0 1.313 1.006 2 2 2zM4.5 21h10a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-10a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5zm.5-9h9v8H5v-8zM4.5 8h24a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-24a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5zM5 4h23v3H5V4zM28.5 11h-10a.5.5 0 0 0 0 1h10a.5.5 0 0 0 0-1zM28.5 14h-10a.5.5 0 0 0 0 1h10a.5.5 0 0 0 0-1zM28.5 17h-10a.5.5 0 0 0 0 1h10a.5.5 0 0 0 0-1zM28.5 20h-10a.5.5 0 0 0 0 1h10a.5.5 0 0 0 0-1zM28.5 23h-10a.5.5 0 0 0 0 1h10a.5.5 0 0 0 0-1zM4.5 24h10a.5.5 0 0 0 0-1h-10a.5.5 0 0 0 0 1zM28.5 26h-10a.5.5 0 0 0 0 1h10a.5.5 0 0 0 0-1zM4.5 27h10a.5.5 0 0 0 0-1h-10a.5.5 0 0 0 0 1z" />
+                            <path
+                                d="M5 31.947h32.02c.007 0 .013-.004.02-.004A4.951 4.951 0 0 0 41.948 27V.5a.447.447 0 1 0-.894 0V27c0 2.235-1.818 4.053-4.053 4.053S32.947 29.235 32.947 27V.5c0-.247-.2-.447-.447-.447H.5C.253.053.053.253.053.5V27A4.952 4.952 0 0 0 5 31.947zM.947.947h31.105V27c0 .306.037.603.09.895.011.058.02.116.033.173.062.278.144.547.251.806.019.047.042.091.063.137.108.242.233.475.378.695.017.025.03.052.047.077.158.23.338.443.531.643.042.043.083.085.127.127.186.18.382.351.594.5H5A4.058 4.058 0 0 1 .947 27V.947z" />
+                        </g>
+                    </svg>
+                </div>
+
+                <span class="font-extrabold tracking-widest mt-2">News Nation</span>
+            </div>
+
+            <button (click)="toggleMenu()" class="w-[2.5em] flex mr-2 sm:hidden items-center hover:bg-purple-800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <path fill="none" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8h26M7 16h18M3 24h26" data-name="Burger Menu" />
+                </svg>
+            </button>
+
+        </div>
+
+        <ul id="navList"
+            class="sm:flex sm:items-center font-medium w-[80%] sm:justify-around p-1 bg-purple-500 rounded-l-lg ">
+
+            <li><span (click)="getDataFromClick($event)" name="general"
+                    class="links px-2 py-1 hover:bg-purple-700 rounded-md duration-200 ease-in cursor-pointer">General</span>
+            </li>
+            <li><span (click)="getDataFromClick($event)"
+                    class="links px-2 py-1 hover:bg-purple-700 rounded-md duration-200 ease-in cursor-pointer">Technology</span>
+            </li>
+            <li><span (click)="getDataFromClick($event)"
+                    class="links px-2 py-1 hover:bg-purple-700 rounded-md duration-200 ease-in cursor-pointer">Entertainment</span>
+            </li>
+            <li><span (click)="getDataFromClick($event)"
+                    class="links px-2 py-1 hover:bg-purple-700 rounded-md duration-200 ease-in cursor-pointer">Business</span>
+            </li>
+            <li><span (click)="getDataFromClick($event)"
+                    class="links px-2 py-1 hover:bg-purple-700 rounded-md duration-200 ease-in cursor-pointer">Health</span>
+            </li>
+            <li><span (click)="getDataFromClick($event)"
+                    class="links px-2 py-1 hover:bg-purple-700 rounded-md duration-200 ease-in cursor-pointer">Science</span>
+            </li>
+            <li><span (click)="getDataFromClick($event)"
+                    class="links px-2 py-1 hover:bg-purple-700 rounded-md duration-200 ease-in cursor-pointer">Sports</span>
+            </li>
+            <li>
+
+                <div class="flex items-center">
+                    <label for="voice-search" class="sr-only">Search</label>
+                    <div class="relative w-full">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+
+                        <input type="text" id="voice-search"
+                            class="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                        <!-- Speech button  -->
+                        <button (click)="getMyWords()" type="button" id="voiceSearch"
+                            class="flex absolute inset-y-0 right-0 items-center pr-3">
+                            <svg aria-hidden="true" class="w-4 h-4 hover:text-gray-900 dark:hover:text-white"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+
+                    </div>
+                    <!-- button to get items from search -->
+                    <button (click)="getDataFromSearch($event)" type="button"
+                        class="inline-flex items-center p-2 ml-2 text-sm font-medium text-white rounded-lg border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                        <svg aria-hidden="true" class="mr-2 -ml-1 w-5 h-5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>Search
+                    </button>
+                </div>
+
+            </li>
+
+            <li>
+                <button (click)="logoutCustomer($event)" class="links px-2 py-1 hover:bg-purple-700 bg-purple-600 rounded-md duration-200 ease-in cursor-pointer">
+                    Logout
+                </button>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Content-portion -->
+
+    <section class="text-gray-600 body-font overflow-hidden p-10">
+
+        <ng-container *ngFor="let item of data">
+            <div class="-my-8 divide-y-2 divide-gray-100 bg-slate-100 mb-10 p-3">
+                <div class="py-8 flex flex-wrap md:flex-nowrap">
+
+                    <div class="md:w-64 w-[100%] mr-5 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                        <img src={{item.urlToImage}} alt="Sorry for the inconveinance">
+                    </div>
+
+                    <div class="md:flex-grow">
+                        <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{{item.title}}</h2>
+                        <p class="leading-relaxed">{{item.description}}</p>
+
+                        <div class="flex flex-col">
+
+                            <a class="text-indigo-500 inline-flex items-center mt-4" href={{item.url}}
+                                target="_blank">Learn
+                                More
+                                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="M12 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+
+                            <button id="share" (click)="shareNews($event)">
+                                <svg class="w-5" xmlns="http://www.w3.org/2000/svg" width="50" height="40"
+                                    viewBox="0 0 100 100">
+                                    <path
+                                        d="M75 64c-4.8 0-9.1 2.3-11.8 5.8L38.9 55.7c1.5-3.7 1.5-7.8 0-11.5l24.3-14.1c2.7 3.5 7 5.8 11.8 5.8 8.3 0 15-6.7 15-15s-6.7-15-15-15-15 6.7-15 15c0 2 .4 4 1.1 5.7L36.8 40.8C34 37.3 29.8 35 25 35c-8.3 0-15 6.7-15 15s6.7 15 15 15c4.8 0 9.1-2.3 11.8-5.8l24.3 14.1C60.4 75 60 77 60 79c0 8.3 6.7 15 15 15s15-6.7 15-15-6.7-15-15-15zm0-54c6.1 0 11 4.9 11 11s-4.9 11-11 11-11-4.9-11-11 4.9-11 11-11zM25 61c-6.1 0-11-4.9-11-11s4.9-11 11-11 11 4.9 11 11-4.9 11-11 11zm50 29c-6.1 0-11-4.9-11-11s4.9-11 11-11 11 4.9 11 11-4.9 11-11 11z" />
+                                    <path fill="#00F" d="M1644-510v1684H-140V-510h1784m8-8H-148v1700h1800V-518z" />
+                                </svg>
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+    </section>
+</div>

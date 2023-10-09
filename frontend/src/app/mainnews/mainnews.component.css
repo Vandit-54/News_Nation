@@ -1,0 +1,30 @@
+@media only screen and (max-width: 640px) 
+{
+    #navbar
+    {
+        flex-direction: column;
+    }
+
+    #navList 
+    {
+      display:none;
+      position:absolute;
+      right:0px;
+      top:4em;
+      width:100%;
+      border-radius: 0px;
+      padding-bottom: 1em;
+    }
+
+    #navList > li
+    {
+        margin-top: 1em;
+    }
+
+    #settingButton
+    {
+        width:100%;
+        display: flex;
+    }
+
+}
